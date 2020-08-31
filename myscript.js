@@ -79,7 +79,7 @@
                     nmErrMsg.style.color="green";
                     tname.style.borderColor = "green";
                     //code before the pause
-                    cardDeck.addcard(tname.value,"test",tdes.value,assignee.value,dDate.value,sTatus.value);
+                    cardDeck.addcard(tname.value,tdes.value,assignee.value,dDate.value,sTatus.value);
                     cardDeck.displayListHtml(edifunc,delfunc);
                    setTimeout(function(){
                     $("#myModal").modal("hide");
@@ -132,7 +132,7 @@
                 document.querySelector("#edes").value      = cardDeck.cardArr[i].description;  
                 document.querySelector("#eAssignee").value = cardDeck.cardArr[i].assignee;  
                 document.querySelector("#edDate").value   = cardDeck.cardArr[i].dDate;  
-                document.querySelector("#estAtus").value  = cardDeck.cardArr[i].st;  
+                document.querySelector("#esTatus").value  = cardDeck.cardArr[i].st;  
                 break;
                 }    
             }
@@ -152,8 +152,7 @@
          let tempstatus = document.querySelector("#esTatus").value;
          
         
-         cardDeck.updateTask(tempId, tempname,"test" ,tempdesc, tempassign, tempdueDate, tempstatus);
-        //  remove edifunc
+         cardDeck.updateTask(tempId, tempname,tempdesc, tempassign, tempdueDate, tempstatus);
          cardDeck.displayListHtml(edifunc,delfunc);
         
          $('#ediTModal').modal('hide');
