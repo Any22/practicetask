@@ -8,7 +8,7 @@
         let tdes     = document.querySelector("#des");   
         let assignee = document.querySelector("#assignee");
         let dDate = document.querySelector("#dDate");
-        let sTatus = document.querySelector("#stAtus");
+        let sTatus = document.querySelector("#sTatus");
          // validation
          let nmErrMsg = document.querySelector("#nmErrMsg"); 
          let nmErrMsg1 = document.querySelector("#nmErrMsg1");
@@ -149,7 +149,7 @@
          let tempdesc = document.querySelector("#edes").value;   
          let tempassign = document.querySelector("#eAssignee").value; 
          let tempdueDate = document.querySelector("#edDate").value;
-         let tempstatus = document.querySelector("#estAtus").value;
+         let tempstatus = document.querySelector("#esTatus").value;
          
         
          cardDeck.updateTask(tempId, tempname,"test" ,tempdesc, tempassign, tempdueDate, tempstatus);
