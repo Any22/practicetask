@@ -1,9 +1,9 @@
 export default class Card {
-    constructor(id,cname,pic,description,assignee,dDate,st)
+    constructor(id,cname,description,assignee,dDate,st)
     {
     this.id = id ;
     this.cname  = cname ;
-    this.pic  = pic   ;
+    // this.pic  = pic   ;
     this.description=description;
     this.assignee = assignee;
     this.dDate=dDate;
@@ -14,7 +14,6 @@ export default class Card {
         let html="";
                 html = `<div id ="cList_${this.id}" class="card">
                         <h1>${this.cname}</h1>
-                        <img src="sample.jpg" alt="Denim Jeans" style="width:100%">
                         <p>${this.description}</p>
                         <p>${this.assignee}</p>
                         <p>${this.dDate}</p>
