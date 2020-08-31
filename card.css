@@ -6,7 +6,7 @@
 .heading
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: xx-large;
+    font-size: medium;
 }
 
 
@@ -20,7 +20,7 @@ img {
        font-size: xx-large;
    }
 .card {
-    width:30% ;
+    width:20% ;
     height:20%;
     box-shadow: 10px 10px 5px 0px rgba(238, 238, 238, 1);
     margin: 15px;
@@ -36,24 +36,24 @@ img {
  {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:green;
-    border:green;
+    background-color:blue;
+    border:blue;
     width: 80px ;
  } 
  #addButton 
  {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:green;
-    border:green;
+    background-color:#007bff;
+    border:#007bff;
     width: 80px ;
  } 
  #addTask
  {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:green;
-    border:green;
+    background-color:#007bff;
+    border:#007bff;
     width: 80px ;
     height:35px;
     padding:10px ;
