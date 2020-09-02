@@ -7,6 +7,28 @@ html {
     box-sizing: border-box;
     font-family: sans-serif;
 }
+/* Add some padding inside the card container */
+.main-container {
+    padding: 2px 16px;
+    text-align: center;
+  }
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: center;
+    width:200px;
+    height:350px;
+    margin: 60px;
+    border-radius: 20px;
+  }
+  .card:hover {
+    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+  }
+
+
 p{
     font-size: 0.9rem;
     line-height: 1.6;
