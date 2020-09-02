@@ -21,6 +21,9 @@ html {
     height:350px;
     margin: 60px;
     border-radius: 20px;
+    position: relative;
+    bottom: 400px;
+    border: 3px solid  #3ccdbb;
   }
   .card:hover {
     
@@ -184,8 +187,7 @@ li{
     background-color:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
     border:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
     width: 180px ;
-    /* height:35px; */
-    /* padding:10px ; */
+    
     font-size:15px ;
     position: absolute;
     left: 100px;
@@ -202,6 +204,7 @@ li{
     position: absolute;
     left: 300px;
     top: 150px;
+    color:white;
    
  }
  
