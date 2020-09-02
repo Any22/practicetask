@@ -1,23 +1,28 @@
 
  import CardManager from "./taskmanager.js"               
-        let taskcontainer = document.querySelector("#taskcontainer"); 
+        const taskcontainer = document.querySelector("#taskcontainer"); 
         let cardDeck=new CardManager(taskcontainer);                    //create an instance of card manager to access the members
-         
+        let dpstorage=document.querySelector("#dpSTask");
+        dpstorage.onclick= function(){
+       cardDeck.displayFromstorage(edifunc,delfunc);
+      }
+
         //adding tasks
         let tname    = document.querySelector("#text1");                //accepting user input from form
         let tdes     = document.querySelector("#des");   
         let assignee = document.querySelector("#assignee");
         let dDate = document.querySelector("#dDate");
         let sTatus = document.querySelector("#sTatus");
+        let addButton=document.querySelector("#addButton");
          // validation
          let nmErrMsg = document.querySelector("#nmErrMsg"); 
          let nmErrMsg1 = document.querySelector("#nmErrMsg1");
          let nmErrMsg2 = document.querySelector("#nmErrMsg2");
-         let nmErrMsg3 = document.querySelector("#nmErrMsg3");
+         // let nmErrMsg3 = document.querySelector("#nmErrMsg3");
  
 
 
-        let addButton=document.querySelector("#addButton");
+        
         addButton.onclick= function(){
             let validStatus ;
       
@@ -27,7 +32,7 @@
                   nmErrMsg.innerHTML="*Please ,fill this field with atleast 8 characters";
                   nmErrMsg.style.color="red";
                   tname.style.borderColor = "red";
-                     tname.focus();
+                  tname.focus();
                   validStatus = false;
                   // break;
                } else 
@@ -40,7 +45,7 @@
             if (tdes.value == "" || tdes.value.length < 10)                               
                
                { 
-                  nmErrMsg1.innerHTML="*Please ,fill this field with atleast 15 characters";
+                  nmErrMsg1.innerHTML= "*Please ,fill this field with atleast 15 characters";
                   nmErrMsg1.style.color="red";
                   tdes.style.borderColor = "red"; 
                   tdes.focus(); 
@@ -85,23 +90,12 @@
                     $("#myModal").modal("hide");
                     resetFields();
                  }, 900);
-                    
-                   
-                 }else 
+
+                 } else 
                  {
                    alert("Please, fill the mandatory fields");
                  }
-           
-              
-           }
-
-        // cardDeck.addcard(tname.value,"test",tdes.value,assignee.value,dDate.value,sTatus.value);
-        // cardDeck.displayListHtml(edifunc,delfunc);
-        // $('#myModal').modal('hide');
-        //      resetFields();
-        // }
-        
-         
+           }   
     function resetFields(){
         
         tname.value     = null;
@@ -123,7 +117,7 @@
             let taskElement = event.target.closest(".Edit");                       
             let edtIdArr = taskElement.id.split("_");                               //spliting the id by underscore. i.e . dbuton_id 
             let retreiveId = edtIdArr[1];
-            alert(retreiveId);
+            // alert(retreiveId);
             
             for (let i=0; i<cardDeck.cardArr.length ; i++){
                 if (retreiveId == cardDeck.cardArr[i].id) {
@@ -164,14 +158,13 @@
         let taskElement = event.target.closest(".delete");                      //see line 74.
         let delIdArr = taskElement.id.split("_");                               //spliting the id by underscore. i.e . dbuton_id 
         let retreiveId = delIdArr[1];
-        alert(retreiveId);
+      //   alert(retreiveId);
         cardDeck.deletFunc(retreiveId);
-        //remove defunc
         cardDeck.displayListHtml(edifunc,delfunc);
         }
     
-    
-
+  
+        
 
     
     
