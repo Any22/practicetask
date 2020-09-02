@@ -9,8 +9,40 @@
         <link rel="stylesheet" href="card.css">
         <title>tasklist</title>
     </head>
-    <body>  
-    <h1 class="mainHeading">Task list</h1>
+    <body> 
+      <div class="header" id="topheader">
+        
+        <nav class=" navbar navbar-expand-lg navbar-dark fixed-top">
+          <!-- places the navbar contents into a box giving even spaces on the left and right cornors, text uppercase-->
+          <div class="container text-uppercase pt-3">
+            <!-- from getbootstrap site (components -> navbar) -->
+            <a class="navbar-brand text-white font-weight-bold" href="#">AHS_PLANNER</a>
+            <!-- from getbootstrap site (components -> navbar) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>	
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">	
+              
+              <ul class="navbar-nav ml-auto text-white">
+                <li class="nav-item">
+                  <a class="nav-link" href="#footerdiv">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+ <!--  created section header for the polygon  -->
+ <section class="header-section">
+  <!-- created a div and centered -->
+  <div class="center-div">
+    
+    </div>
+  </div>
+</section>
+</div>
+  <!-- ***************** End of Header Section **************** -->
+  
+    <h1 class="mainHeading"></h1>
     <div id ="main-container">
         <div id="taskcontainer">
             <div id ="cList" class="card">
@@ -26,8 +58,8 @@
     </div>
 
 <!-- Adding tasks in Modal here -->
-<button type="button" class="btn btn-info btn-lg" id="addTask" data-toggle="modal" data-target="#myModal">Add New</button> 
-<button type="button" class="btn btn-primary" id="dpSTask">Display stored tasks</button> 
+<button type="button" class="btn btn-info btn-lg" id="addTask" data-toggle="modal" data-target="#myModal">Add New Task</button> 
+<button type="button" class="btn btn-imfo" id="dpSTask">Stored tasks</button> 
  
 
 <!-- Modal -->
@@ -114,8 +146,8 @@
       <div class="modal-body">
         <form>
           <div class="form-group"> 
-          <label for="inputId">Task id</label>
-          <input type="text" id="tId"></input>
+          <label for="inputId"></label>
+          <input type="hidden" id="tId"></input>
           <span id="nmErrMsg"></span>
           </div>
         <div class="form-group">
@@ -167,16 +199,60 @@
         </div>
       </div>
     </div>
-  
+ 
+
+     <!-- *************************footer start************************* -->
+		
+		
+		<footer class="footersection" id="footerdiv">
+<!-- 			
+			using grid system -->
+
+			<div class="container">
+				<div class="row">
+				
+					<div class="footer-div  col-lg-4 col-md-6 col-12">
+						<div>
+							<h3>Anand Salimeda</h3>
+							<p>github link</p>
+						</div>
+					</div>
+					<div class="footer-div  col-lg-4 col-md-6 col-12 text-center">
+						<div>
+							<h3> Hosai Aziz</h3>
+							<p>github.</p>
+						</div>
+					</div>
+					<div class="footer-div  col-lg-4 col-md-12 col-12">
+						<div>
+							<h3> Saba Akhtar</h3>
+							<p>github</p>
+						</div>
+					</div>
+			
+				</div>
+				
+			
+<!-- Copyright details -->
+				<div class="mt-5 text-center">
+					<p>Copyright ©2020 | by Anand - Hosai - Saba</p>
+				</div>
+
+			
+		</footer>
+		<!-- **************************** footer ends *********************/ -->
+
          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="myscript.js"></script>
 
-
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="myscript.js"></script>
-        
+		
+			
+		
     </body>
     </html>

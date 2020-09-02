@@ -1,3 +1,120 @@
+html {
+    scroll-behavior: smooth;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #606060;
+}
+
+
+/* hover decoraction none otherwise you will see a line on anchor tag for home, our team etc in the navbar )*/
+a:hover{
+    text-decoration: none!important;
+}
+
+/* to remove the sytling of li tags */
+li{
+    list-style: none;
+}
+.headings{
+    margin-bottom: 50px;
+}
+
+.headings h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/************** actual css classes code starts *****************/
+  /* header class from navbar for styling the header section image and polygon not navbar   */
+  .header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,168,255, 0.3),rgba(0,168,255, 0.3));
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
+    /* user relative as need to use a peduo element for the polygon */
+    position: relative;
+}
+/*  */
+.header:before{
+    content: "";
+    position: absolute;
+    /* for text to appear on top of the polygon */
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%) ;
+    /* to make the polygon color opac */
+    opacity: .4;
+}
+
+ /* navbar styling same as header. From the html file remove navbar-light and bg-light then styling of the polygon will appear on the navbar  */
+ .navbar:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%) repeat scroll 0 0;
+    opacity: .4;
+}
+
+.navbar{
+    z-index: 5;
+}
+
+/*  */
+.nav-item{
+    padding: 0 10px;
+}
+
+/* navbar anchor items colour styling for home, ourteam etc */
+.nav-item a{
+    color: white !important;
+    font-weight: bold;
+}
+
+  
+ 
+
+/************************ footer part start ********************/
+
+.footersection{
+    width: 100%;
+    height: auto;
+    padding: 70px 0 20px 0;
+    background: #16c9f6 ;
+    position: relative;
+}
+
+.footersection p{
+    color: #fff;
+}
+
+.footersection li a{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+
 #taskcontainer{
     display:flex ;
     flex-direction: row;
@@ -10,23 +127,13 @@
 }
 
 
-img {
-    width: 80%;
-    height: 30%;
-   }
+
    .mainHeading{
        font-family: sans-serif;
        text-align: center;
        font-size: xx-large;
    }
-.card {
-    width:20% ;
-    height:20%;
-    box-shadow: 10px 10px 5px 0px rgba(238, 238, 238, 1);
-    margin: 15px;
-    text-align: center;
-    padding-bottom: 10px;
-    }
+
 #taskcontainer.h1
 {
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -36,28 +143,43 @@ img {
  {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:blue;
-    border:blue;
+    background-color:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    border:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
     width: 80px ;
  } 
  #addButton 
  {
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:#007bff;
-    border:#007bff;
+    background-color:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    border:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
     width: 80px ;
  } 
  #addTask
  {
-    border-radius: 8px;
+    border-radius:15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color:#007bff;
-    border:#007bff;
-    width: 80px ;
-    height:35px;
-    padding:10px ;
+    background-color:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    border:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    width: 180px ;
+    /* height:35px; */
+    /* padding:10px ; */
     font-size:15px ;
+    position: absolute;
+    left: 100px;
+    top: 150px;
      
  } 
+ #dpSTask
+ {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    border:linear-gradient(160deg, #16c9f6 55%,  #fff 0%);
+    width: 180px ;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+   
+ }
  

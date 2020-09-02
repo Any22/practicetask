@@ -1,7 +1,7 @@
 
  import CardManager from "./taskmanager.js"               
         const taskcontainer = document.querySelector("#taskcontainer"); 
-        let cardDeck=new CardManager(taskcontainer);                    //create an instance of card manager to access the members
+        const cardDeck=new CardManager(taskcontainer);                    //create an instance of card manager to access the members
         let dpstorage=document.querySelector("#dpSTask");
         dpstorage.onclick= function(){
        cardDeck.displayFromstorage(edifunc,delfunc);
