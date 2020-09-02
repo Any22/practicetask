@@ -3,7 +3,6 @@ export default class Card {
     {
     this.id = id ;
     this.cname  = cname ;
-    // this.pic  = pic   ;
     this.description=description;
     this.assignee = assignee;
     this.dDate=dDate;
@@ -18,7 +17,6 @@ export default class Card {
                         <p>${this.assignee}</p>
                         <p>${this.dDate}</p>
                         <p>${this.st}</p>
-                        <p>${this.id}</p>
                         <p><button class="delete btn btn-primary" id="dbutton_${this.id}"> Delete</button></p>
                         <p><button class="Edit btn btn-primary" id="ebutton_${this.id}"> Edit</button></p>
                         </div>`;  
