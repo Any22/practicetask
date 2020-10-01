@@ -1,10 +1,10 @@
-
- import CardManager from "./taskmanager.js"               
+import CardManager from "./taskmanager.js" 
+// import CardManager from "./taskmanager.js"              
         const taskcontainer = document.querySelector("#taskcontainer"); 
         const cardDeck=new CardManager(taskcontainer);                    //create an instance of card manager to access the members
         let dpstorage=document.querySelector("#dpSTask");
         dpstorage.onclick= function(){
-       cardDeck.displayFromstorage(edifunc,delfunc);
+       cardDeck.displayTask(edifunc,delfunc);
       }
 
         //adding tasks
@@ -85,7 +85,7 @@
                     tname.style.borderColor = "green";
                     //code before the pause
                     cardDeck.addcard(tname.value,tdes.value,assignee.value,dDate.value,sTatus.value);
-                    cardDeck.displayListHtml(edifunc,delfunc);
+                    cardDeck.displayTask(edifunc,delfunc);
                    setTimeout(function(){
                     $("#myModal").modal("hide");
                     resetFields();
@@ -147,7 +147,7 @@
          
         
          cardDeck.updateTask(tempId, tempname,tempdesc, tempassign, tempdueDate, tempstatus);
-         cardDeck.displayListHtml(edifunc,delfunc);
+         cardDeck.displayTask(edifunc,delfunc);
         
          $('#ediTModal').modal('hide');
       }
@@ -160,7 +160,7 @@
         let retreiveId = delIdArr[1];
       //   alert(retreiveId);
         cardDeck.deletFunc(retreiveId);
-        cardDeck.displayListHtml(edifunc,delfunc);
+        cardDeck.displayTask(edifunc,delfunc);
         }
     
   
